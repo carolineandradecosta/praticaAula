@@ -7,10 +7,11 @@ habilitação.
 * Saída: idade, idade para votar, idade para dirigir '''
 
 from datetime import datetime
+from datetime import date
 from pytz import timezone
 
 def calcula_idade(ano_nascimento: int):
-    ano_atual = 2023
+    ano_atual = date.today().year
     idade_pessoa = ano_atual - ano_nascimento
     return idade_pessoa
 
@@ -25,6 +26,3 @@ def verifica_idade(idade: int):
 
 idade = (calcula_idade(1992))
 verifica_idade(idade)
-
-date_atual = datetime.now()
-print(date_atual)
